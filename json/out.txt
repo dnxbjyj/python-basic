@@ -1,0 +1,28 @@
+		var exceptions = {
+			"-1" : {
+				"desc" : "this is desc",
+				"cause" : "this is cause",
+				"solution" : "this is solution"
+			},
+			"0" : {
+				"desc" : "this is desc",
+				"cause" : "this is cause",
+				"solution" : "this is solution"
+			},
+		    "1001": {
+		        "desc": "this is desc", 
+		        "cause": "this is cause", 
+		        "solution": "this is solution"
+		    }, 
+		    "1002": {
+		        "desc": "this is desc", 
+		        "cause": "this is cause", 
+		        "solution": "this is solution"
+		    }, 
+		    "1003": {
+		        "desc": "this is desc", 
+		        "cause": "this is cause", 
+		        "solution": "this is solution"
+		    }
+		};
+		return exceptions
