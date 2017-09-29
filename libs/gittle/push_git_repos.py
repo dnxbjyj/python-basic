@@ -63,6 +63,7 @@ def batch_push_git_repo(parent_path):
 
     from gevent import monkey
     monkey.patch_all()
+    # 使用协程池并行操作
     pool = Pool(10)
     pool.map(push_git_repo,dirs)
 
