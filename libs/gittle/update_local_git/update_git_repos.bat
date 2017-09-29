@@ -1,0 +1,1 @@
+e:\code\env\.env\scripts\activate && python push_git_repos.py && pause
