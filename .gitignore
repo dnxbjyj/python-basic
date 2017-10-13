@@ -1,4 +1,5 @@
 # other
+*.pdf
 .idea/
 CHN_adm_shp/
 .idea/
