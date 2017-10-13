@@ -13,32 +13,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add_context_menu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/context-menu/add_context_menu.py">
+      <file leaf-file-name="refer.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/pypdf2/refer.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="62" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="refer.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/context-menu/refer.md">
+      <file leaf-file-name="add_bookmark.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/pypdf2/add_bookmark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show_path.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/context-menu/show_path.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="113">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding>
+                <element signature="e#81#147#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,6 +110,8 @@
         <option value="$PROJECT_DIR$/context-menu/data.txt" />
         <option value="$PROJECT_DIR$/context-menu/refer.md" />
         <option value="$PROJECT_DIR$/context-menu/add_context_menu.py" />
+        <option value="$PROJECT_DIR$/libs/pypdf2/refer.txt" />
+        <option value="$PROJECT_DIR$/libs/pypdf2/add_bookmark.py" />
       </list>
     </option>
   </component>
@@ -146,6 +140,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,7 +151,13 @@
             <path>
               <item name="python-basic" type="b2602c69:ProjectViewProjectNode" />
               <item name="python-basic" type="462c0819:PsiDirectoryNode" />
-              <item name="context-menu" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-basic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-basic" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+              <item name="pypdf2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python-basic" type="b2602c69:ProjectViewProjectNode" />
@@ -166,7 +167,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,7 +202,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.add_context_menu">
+  <component name="RunManager" selected="Python.add_bookmark">
+    <configuration name="add_bookmark" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/pypdf2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python-basic" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/pypdf2/add_bookmark.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="add_context_menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,38 +305,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="zip_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/useful-func/zip" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python-basic" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/useful-func/zip/zip_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.test_simple" />
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.zip_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.add_menu" />
-      <item index="5" class="java.lang.String" itemvalue="Python.add_context_menu" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.add_menu" />
+      <item index="4" class="java.lang.String" itemvalue="Python.add_context_menu" />
+      <item index="5" class="java.lang.String" itemvalue="Python.add_bookmark" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.add_context_menu" />
-        <item index="1" class="java.lang.String" itemvalue="Python.add_menu" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.zip_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.add_bookmark" />
+        <item index="1" class="java.lang.String" itemvalue="Python.add_context_menu" />
+        <item index="2" class="java.lang.String" itemvalue="Python.add_menu" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -340,12 +340,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2647504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23972602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44863012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27054796" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1969178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5205479" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -370,20 +370,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libs/pyinstaller/argtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/login/douban_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -664,10 +650,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/context-menu/show_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/context-menu/add_context_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="62" selection-end-column="19" />
+        <state relative-caret-position="147">
+          <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -680,11 +674,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/context-menu/show_path.py">
+    <entry file="file://$PROJECT_DIR$/libs/pypdf2/refer.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/pypdf2/add_bookmark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#81#147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
