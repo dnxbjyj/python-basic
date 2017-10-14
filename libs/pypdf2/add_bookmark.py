@@ -11,9 +11,7 @@ sys.setdefaultencoding('utf-8')
 
 def main():
     # 读取PDF文件，创建PdfFileReader对象
-    book = None
-    with open('./book.pdf','rb') as fin:
-        book = reader('./book.pdf')
+    book = reader('./book.pdf')
 
     # 创建PdfFileWriter对象，并用拷贝reader对象进行初始化
     pdf = writer()
@@ -21,7 +19,8 @@ def main():
 
     # 添加书签
     # 注意：页数是从0开始的，中文要用unicode字符串，否则会出现乱码
-    pdf.addBookmark(u'第0页abc123',0)
+    # 如果这里的页码超过文档的最大页数，会报IndexError异常
+    pdf.addBookmark(u'第0页abc123',2)
 
     # 保存修改后的PDF文件内容到文件中
     with open('./out.pdf','wb') as fout:
