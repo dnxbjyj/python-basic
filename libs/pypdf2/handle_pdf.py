@@ -1,14 +1,16 @@
 # coding:utf-8
 # 处理PDF的常用操作
-from pdf_utils import MyPDFHandler
+from PyPDF2 import PdfFileReader as reader,PdfFileWriter as writer
+from pdf_utils import MyPDFHandler,PDFHandleMode as mode
 import sys
+import re
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 def main():
-    pdf_handler = MyPDFHandler('./book.pdf')
-    pdf_handler.add_bookmarks_by_read_txt('./bookmarks.txt')
-    pdf_handler.save2file('./new.pdf')
+    pdf_handler = MyPDFHandler(u'./Eclipse插件开发学习笔记.pdf',mode = mode.NEWLY)
+    pdf_handler.add_bookmarks_by_read_txt('./bookmarks.txt',page_offset = 11)
+    pdf_handler.save2file(u'./Eclipse插件开发学习笔记-目录书签版.pdf')
 
 if __name__ == '__main__':
     main()
