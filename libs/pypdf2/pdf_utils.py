@@ -127,6 +127,6 @@ class MyPDFHandler(object):
         :param page_offset: 页码便宜量，为0或正数，即由于封面、目录等页面的存在，在PDF中实际的绝对页码比在目录中写的页码多出的差值
         :return: None
         '''
-        bookmarks = self.read_bookmarks_from_txt('bookmarks.txt',page_offset)
+        bookmarks = self.read_bookmarks_from_txt(txt_file_path,page_offset)
         self.add_bookmarks(bookmarks)
         print 'add_bookmarks_by_read_txt success!'
