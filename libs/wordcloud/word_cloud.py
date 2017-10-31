@@ -67,7 +67,7 @@ def get_top_words(file_path, topn):
 
 
 # 根据传入的背景图片路径和词频字典、字体文件，生成指定名称的词云图片
-def generate_word_cloud(top_words_with_freq, font_path, to_save_img_path, background_color='black'):
+def generate_word_cloud(top_words_with_freq, font_path, to_save_img_path, background_color='white'):
     # 创建词云对象
     wc = WordCloud(font_path=font_path,  # 设置字体
                    background_color=background_color,  # 词云图片的背景颜色，默认为白色
