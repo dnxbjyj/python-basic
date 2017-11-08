@@ -20,6 +20,13 @@ def main():
     with open(current_file_path,'r') as fin:
         try:
             content = json.load(fin)
+
+            # 判断json是否有重复的键，如果有，报错，并指出哪个键重复
+            keys = content.keys()
+            keys_set = set(keys)
+            if len(keys) != keys_set:
+                raise ValueError('duplicate keys: {0}'.format())
+
         except ValueError,e:
             print 'validate error! invalid json file: {0}'.format(e.message)
             os.system('pause')

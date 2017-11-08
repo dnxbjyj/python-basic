@@ -48,3 +48,7 @@ def add_validate_json_menu():
 
 if __name__ == '__main__':
     add_validate_json_menu()
+
+    import json
+    from collections import OrderedDict
+    json.loads('',object_pairs_hook=OrderedDict)
