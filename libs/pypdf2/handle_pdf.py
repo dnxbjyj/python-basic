@@ -8,9 +8,9 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 def main():
-    pdf_handler = MyPDFHandler(u'《新一代人工智能发展规划》.pdf',mode = mode.NEWLY)
-    pdf_handler.add_bookmarks_by_read_txt('./bookmarks-ai_inform.txt',page_offset = 0)
-    pdf_handler.save2file(u'《新一代人工智能发展规划》-目录书签版.pdf')
+    pdf_handler = MyPDFHandler(u'Greek Mythology.pdf',mode = mode.NEWLY)
+    pdf_handler.add_bookmarks_by_read_txt('./bookmarks-GreekMythology.txt',page_offset = 1)
+    pdf_handler.save2file(u'Greek Mythology-目录书签版.pdf')
 
 if __name__ == '__main__':
     main()
