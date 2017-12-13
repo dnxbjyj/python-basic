@@ -2,9 +2,9 @@
 # 测试多进程
 import os
 import time
-from multiprocessing import Process,Pool
-from utils import urls,fn_timer
-from multiprocessing.pool import MapResult
+from multiprocessing import Process,Pool,Queue
+from utils import fn_timer
+import random
 
 # 简单的任务
 @fn_timer
@@ -44,10 +44,77 @@ def test_use_process_pool():
 
     print 'All processes end, results is: {0}'.format(results.get())
 
-def main():
-    # test_simple_multi_process()
+# 写进程执行的任务
+def write(q):
+    for value in ['A','B','C']:
+        print 'Put value: {0} to queue.'.format(value)
+        q.put(value)
+        time.sleep(random.random())
 
-    # test_use_process_pool()
+# 读进程执行的任务
+def read(q):
+    while True:
+        value = q.get(True)
+        print 'Get value: {0} from queue.'.format(value)
+
+# 测试进程间的通信
+def test_communication_between_process():
+    q = Queue()
+    # 写进程
+    pw = Process(target = write,args = (q,))
+    # 读进程
+    pr = Process(target = read,args = (q,))
+    pw.start()
+    pr.start()
+    pw.join()
+    # 因为读任务是死循环，所以要强行结束
+    pr.terminate()
+
+def main():
+    test_simple_multi_process()
+    # 输出：
+    '''
+    Process will start...
+    Run child process 1524, task name is: task2
+    Run child process 1728, task name is: task1
+    [finished function:do_simple_task in 1.20s]
+    [finished function:do_simple_task in 1.20s]
+    Process end.
+    [finished function:test_simple_multi_process in 1.34s]
+    '''
+
+    test_use_process_pool()
+    # 输出：
+    '''
+    Many processes will start...
+    Run child process 7568, task name is: task0
+    Run child process 7644, task name is: task1
+    Run child process 7628, task name is: task2
+    Run child process 7620, task name is: task3
+    Run child process 7660, task name is: task4
+    [finished function:do_simple_task in 1.20s]
+    Run child process 7568, task name is: task5
+    [finished function:do_simple_task in 1.20s]
+    Run child process 7644, task name is: task6
+    [finished function:do_simple_task in 1.20s]
+    [finished function:do_simple_task in 1.20s]
+    [finished function:do_simple_task in 1.20s]
+    [finished function:do_simple_task in 1.20s]
+    [finished function:do_simple_task in 1.20s]
+    All processes end, results is: ['task0', 'task1', 'task2', 'task3', 'task4', 'task5', 'task6']
+    [finished function:test_use_process_pool in 2.62s]
+    '''
+
+    test_communication_between_process()
+    # 输出
+    '''
+    Put value: A to queue.
+    Get value: A from queue.
+    Put value: B to queue.
+    Get value: B from queue.
+    Put value: C to queue.
+    Get value: C from queue.
+    '''
 
 if __name__ == '__main__':
     main()

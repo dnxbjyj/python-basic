@@ -159,8 +159,8 @@ def main():
     '''
 
     # 3.使用线程池
-    # resps = download_using_pool(urls)
-    # print len(resps)
+    resps = download_using_pool(urls)
+    print len(resps)
     # 输出：
     '''
     [finished function:download_using_pool in 0.84s]
