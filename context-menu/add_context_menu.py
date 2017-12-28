@@ -1,6 +1,33 @@
 # coding:utf-8
 # 以各种不同的方式在Windows系统下添加右键菜单
 import _winreg as reg
+def add_hello_context_menu():
+    '''
+    添加右键菜单，打印'Hello World'
+    :return:
+    '''
+    # 菜单名称，如果含有中文，需要采用GBK编码格式，否则会出现乱码
+    menu_name = 'Hello, 你好世界！'.decode('utf-8').encode('gbk')
+    # 点击菜单所执行的命令
+    menu_command = 'python d:/hello.py'
+
+    # 打开名称为'HEKY_CLASSES_ROOT\\Directory\\Background\\shell'的注册表键，第一个参数为key，第二个参数为sub_key
+    # 函数原型：OpenKey(key, sub_key, res = 0, sam = KEY_READ)
+    # 注：路径分隔符依然要使用双斜杠'\\'
+    key = reg.OpenKey(reg.HKEY_CLASSES_ROOT, r'Directory\\Background\\shell')
+
+    # 为key创建一个名称为menu_name的sub_key，并设置sub_key的值为menu_name，数据类型为REG_SZ即字符串类型，后面跟的'(&H)'表示执行该sub_key的快捷键
+    # 函数原型：SetValue(key, sub_key, type, value)
+    reg.SetValue(key, menu_name, reg.REG_SZ, menu_name + '(&H)')
+
+    # 打开刚刚创建的名为menu_name的子键
+    sub_key = reg.OpenKey(key, menu_name)
+    # 为sub_key添加名为'command'的子键，并设置其值为menu_command，数据类型为REG_SZ字符串类型
+    reg.SetValue(sub_key, 'command', reg.REG_SZ, menu_command)
+
+    # 关闭sub_key和key
+    reg.CloseKey(sub_key)
+    reg.CloseKey(key)
 
 def add_open_with_chrome_menu():
     '''
@@ -56,7 +83,7 @@ def add_context_menu(menu_name,command,reg_root_key_path,reg_key_path,shortcut_k
 
 def add_show_file_path_menu():
     '''
-    添加右键菜单，可以在选中一个文件、目录、文件夹空白处或驱动器盘符后在命令行中打印出当前的绝对路径
+    添加右键菜单，可以在右键点击一个文件、目录、文件夹空白处或驱动器盘符后在命令行中打印出当前的绝对路径
     :return: None
     '''
     # 菜单名称
@@ -102,12 +129,33 @@ def delete_reg_key(root_key,key,menu_name):
             else:
                 reg.DeleteKey(parent_key,menu_name)
 
+def add_open_with_chrome():
+    '''
+    添加"用谷歌浏览器打开"右键菜单
+    :return:
+    '''
+    # 右键菜单名
+    menu_name = 'Open with chrome'
+    # Chrome浏览器可执行文件的本地绝对路径
+    command = r'C:\\Users\\Administrator.PC-20170728DWIF\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'
+    # 注册表根键
+    reg_root_key_path = reg.HKEY_CLASSES_ROOT
+    # 注册表父键
+    reg_key_path = r'*\\shell'
+    # 快捷键
+    shortcut_key = 'C'
+    add_context_menu(menu_name, command, reg_root_key_path, reg_key_path, shortcut_key)
+
 if __name__ == '__main__':
+    add_open_with_chrome()
+
     # add_open_with_chrome_menu()
     # add_show_file_path_menu()
 
+    '''
     menu_name = 'Show file path'
     delete_reg_key(reg.HKEY_CLASSES_ROOT,r'*\\shell',menu_name)
     delete_reg_key(reg.HKEY_CLASSES_ROOT, r'Directory\\shell', menu_name)
     delete_reg_key(reg.HKEY_CLASSES_ROOT, r'Directory\\Background\\shell', menu_name)
     delete_reg_key(reg.HKEY_CLASSES_ROOT, r'Drive\\shell', menu_name)
+    '''
