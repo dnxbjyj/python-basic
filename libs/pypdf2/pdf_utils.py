@@ -1,8 +1,5 @@
 # coding:utf-8
 # 封装的PDF文档处理工具
-'''
-pypdf2 doc: http://pythonhosted.org/PyPDF2/
-'''
 from PyPDF2 import PdfFileReader as reader,PdfFileWriter as writer
 import os
 
