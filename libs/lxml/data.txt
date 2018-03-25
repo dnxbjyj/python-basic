@@ -1,0 +1,45 @@
+<table id="px" class="table-style5 tablesorter">
+    <thead>
+        <tr class="bg-color">
+          <th width="10%">序号</th>
+          <th width="20%">城市名称</th>
+          <!-- BUG: 只有付费用户才有排序功能 -->
+                                <th width="25%"><div><span>平均房价(元/㎡)</span></div></th>
+          <th><div><span>环比上月</span></div></th>
+          <th><div><span>同比上年</span></div></th>
+                                
+        </tr>
+    </thead>
+    <tbody id="order_f">
+        <tr>
+            <td>1</td>
+            <td><a href="/market/bj/forsale/ALL/11.html" target="_blank">北京</a></td>
+            <td>  
+                        63,993              </td>
+            <td class="red">
+                +1.79%                      </td>
+            <td class="red">
+                +5.36%                      </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="/market/cq/forsale/ALL/11.html" target="_blank">重庆</a></td>
+            <td>  
+                10,958                      </td>
+            <td class="red">
+                +2.12%                      </td>
+            <td class="red">
+                +44.49%                     </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="/market/gz/forsale/ALL/11.html" target="_blank">广州</a></td>
+            <td>  
+                31,511                      </td>
+            <td class="green">
+                -0.18%                      </td>
+            <td class="red">
+                +27.55%                     </td>
+        </tr>
+    </tbody>
+</table>
