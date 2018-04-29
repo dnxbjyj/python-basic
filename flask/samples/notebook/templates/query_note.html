@@ -1,0 +1,28 @@
+<h1>Note Detail</h1>
+<div>
+    <h3>{{note.title}}</h3>
+    <p>{{note.body}}</p>
+    <a href="#" class="btn-delete" id="{{note.id}}">Delete</a>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $('a.btn-delete').on('click',function(evt){
+        evt.preventDefault();
+        // 笔记ID
+        var note_id = $(this).attr('id');
+        $.ajax({
+            url: "/notes/" + note_id,
+            type: "DELETE",
+            dataType: "JSON",
+            success:function(resp){
+                // 删除失败
+                if(resp.status != 1 ){
+                    alert("Delete failed, reason: "+ resp.message);
+                }
+                // 删除成功，重定向到笔记列表页面
+                // window.location.href="/notes";
+            }
+        })
+    });
+</script>

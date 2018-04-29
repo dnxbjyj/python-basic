@@ -1,0 +1,4 @@
+<h1>Notes List</h1>
+{% for note in notes%}
+    <h3><a href="/notes/{{note.id}}">{{note.title}}</a></h3>
+{% endfor %}
