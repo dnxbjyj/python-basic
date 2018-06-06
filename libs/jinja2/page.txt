@@ -1,0 +1,14 @@
+This is my website.
+  
+My Index Page
+这里是页面头部。
+  
+
+  
+这里是页面内容。
+  
+
+Copyright by me.
+  
+这里是页面底部。
+  

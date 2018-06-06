@@ -1,0 +1,15 @@
+# flask-sqlalchemy
+http://flask-sqlalchemy.pocoo.org/2.3/
+https://blog.csdn.net/lilovfly/article/details/78513311
+
+# render_template
+https://blog.csdn.net/GeekLeee/article/details/52505605
+
+# flask jquery
+http://www.pythondoc.com/flask/patterns/jquery.html
+
+# flask samples
+http://www.pythondoc.com/flask/patterns/index.html
+
+# Jinja2
+http://jinja.pocoo.org/docs/dev/

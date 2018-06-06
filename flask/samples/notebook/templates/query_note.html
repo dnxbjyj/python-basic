@@ -1,27 +1,35 @@
 <h1>Note Detail</h1>
+<h3><a href="/notes">< Back</a></h3>
 <div>
+    <a href="/notes/update/{{note.id}}" id="{{note.id}}">Update</a>
     <h3>{{note.title}}</h3>
     <p>{{note.body}}</p>
     <a href="#" class="btn-delete" id="{{note.id}}">Delete</a>
 </div>
 
+<!-- 先引入jquery，下面要用到-->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+<!--发送ajax请求 -->
 <script type="text/javascript">
     $('a.btn-delete').on('click',function(evt){
+        // 通知浏览器不要执行与事件关联的默认动作
         evt.preventDefault();
-        // 笔记ID
+        // 获取笔记ID
         var note_id = $(this).attr('id');
         $.ajax({
+            // 请求URL
             url: "/notes/" + note_id,
+            // 请求方法类型
             type: "DELETE",
-            dataType: "JSON",
+            contentType:"application/json",
+            // 删除成功响应函数
             success:function(resp){
-                // 删除失败
-                if(resp.status != 1 ){
-                    alert("Delete failed, reason: "+ resp.message);
-                }
-                // 删除成功，重定向到笔记列表页面
-                // window.location.href="/notes";
+                window.open("/notes","_self");
+            },
+            // 删除失败响应函数
+            error:function(resp){
+                alert("delete note failed! message is: " + resp.message);
             }
         })
     });

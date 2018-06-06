@@ -1,0 +1,11 @@
+This is my website.
+{% block head %}  
+    {% block title %}{% endblock %}
+{% endblock %}  
+
+{% block content%}
+{% endblock %}  
+
+Copyright by me.
+{% block footer %}  
+{% endblock %}  

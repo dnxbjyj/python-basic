@@ -1,0 +1,14 @@
+{% extends "base_template.txt" %}  
+  
+{% block head %}  
+{% block title %}{{my_title}}{% endblock %}
+这里是页面头部。
+{% endblock %}  
+
+{% block content %}  
+这里是页面内容。
+{% endblock content%}  
+
+{% block footer %}  
+这里是页面底部。
+{% endblock %}  

@@ -1,4 +1,11 @@
 <h1>Notes List</h1>
-{% for note in notes%}
-    <h3><a href="/notes/{{note.id}}">{{note.title}}</a></h3>
-{% endfor %}
+<h3><a href="/">Index</a></h3>
+<!-- Jinja模板语法 -->
+{% if notes %}
+    {% for note in notes%}
+        <h3><a href="/notes/{{note.id}}">{{note.title}}</a></h3>
+    {% endfor %}
+{% else %}
+    <p>ther is NOT any notes!</p>
+    <a href="/notes/create">Go Create</a>
+{% endif %}
